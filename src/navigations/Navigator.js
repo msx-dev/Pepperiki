@@ -25,6 +25,7 @@ const BottomTabNavigator = () => {
                 component={Home}
                 options={{
                     tabBarLabel: "",
+                    headerShown: false,
                     tabBarIcon: ({color, size}) => (
                         <Image 
                             source={require("../images/chili.png")}
@@ -39,6 +40,7 @@ const BottomTabNavigator = () => {
                 component={Profile}
                 options={{
                     tabBarLabel: "",
+                    headerShown: false,
                     tabBarIcon: ({color, size}) => (
                         <Image 
                             source={require("../images/chili.png")}
@@ -53,6 +55,7 @@ const BottomTabNavigator = () => {
                 component={Detail}
                 options={{
                     tabBarLabel: "",
+                    headerShown: false,
                     tabBarIcon: ({color, size}) => (
                         <Image 
                             source={require("../images/chili.png")}
@@ -69,13 +72,13 @@ const BottomTabNavigator = () => {
 
 const Stack = createStackNavigator();
 const screenOptionStyle = {
-    headerShown: false
+    headerShown: false,
 }
 
 const HomeStackNavigator = () => {
     return(
-        <Stack.Navigator screenOptions={screenOptionStyle}>
-            <Stack.Screen name="Home" component={BottomTabNavigator}/>
+        <Stack.Navigator screenOptions={screenOptionStyle} >
+            <Stack.Screen name="Home" component={BottomTabNavigator} options={{ headerShown: false }}/>
             <Stack.Screen name="Detail" component={Detail}/>
         </Stack.Navigator>
     )
