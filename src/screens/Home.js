@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     topbar: {
         height: "20%",
         backgroundColor: "#f5424e",
-        borderBottomLeftRadius: 30,
+        borderBottomLeftRadius: 20,
     },
     gradient: {
         left: 0,
